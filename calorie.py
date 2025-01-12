@@ -9,17 +9,13 @@ from xgboost import XGBRegressor
 from PIL import Image
 import time
 
-st.title(' Calorie Burnt Predictor')
-
+st.title('Calorie Burnt Predictor')
 # Load the CSV files into DataFrames
 df1 = pd.read_csv("calories.csv")
 df2 = pd.read_csv("exercise.csv")
 
-#Heading
-st.title('Calorie Burnt Predictor')
-
 image = Image.open("burn.png")
-st.image(image, caption="Calorie Predictor", use_column_width=True)
+st.image(image, caption="Calorie Predictor", use_container_width=True)
 
 # Take inputs
 user_input_age = st.sidebar.slider('Age', 1, int(df2["Age"].max()), 18)
@@ -65,4 +61,6 @@ predicated_calories = model.predict(user_input_scaled)  # Use the trained XGBReg
 
 # Print the predicted median calories
 st.write(f'The predicted calories value for given input is: {predicated_calories[0]}')
+
+
 
