@@ -7,20 +7,20 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
 from PIL import Image
 import time
-
 st.title('Calorie Burnt Predictor')
-# Load the CSV files into DataFrames
-df1 = pd.read_csv("cakories.csv")
-df2 = pd.read_csv("exercise.csv")
 
-image = Image.open("burn.png")
-st.image(image, caption="Calorie Predictor", use_container_width=True)
+#Load the CSV files into DataFrames
+#df1 = pd.read_csv("calories.csv")
+d#f2 = pd.read_csv("exercise.csv")
+
+#image = Image.open("burn.png")
+#st.image(image, caption="Calorie Predictor", use_column_width=True)
 
 # Take inputs
-user_input_age = st.sidebar.slider('Age', 1, int(df2["Age"].max()), 18)
-user_input_height = st.sidebar.slider('Height', 1, int(df2["Height"].max()), 170)
-user_input_weight = st.sidebar.slider('Weight', 1, int(df2["Weight"].max()), 60)
-user_input_duration = st.sidebar.slider('Duration', 1, int(df2["Duration"].max()), 12)
+#user_input_age = st.sidebar.slider('Age', 1, int(df2["Age"].max()), 18)
+#user_input_height = st.sidebar.slider('Height', 1, int(df2["Height"].max()), 170)
+#ser_input_weight = st.sidebar.slider('Weight', 1, int(df2["Weight"].max()), 60)
+#user_input_duration = st.sidebar.slider('Duration', 1, int(df2["Duration"].max()), 12)
 user_input_rate = st.sidebar.slider('Heart Rate', 1, int(df2["Heart_Rate"].max()), 80)
 user_input_temp = st.sidebar.slider('Body Temperature', 1, int(df2["Body_Temp"].max()), 39)
 
@@ -60,6 +60,4 @@ predicated_calories = model.predict(user_input_scaled)  # Use the trained XGBReg
 
 # Print the predicted median calories
 st.write(f'The predicted calories value for given input is: {predicated_calories[0]}')
-
-
 
