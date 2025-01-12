@@ -1,3 +1,7 @@
-streamlit
-scikit-learn
+
 pillow
+pandas
+numpy
+xgboost
+scikit-learn
+streamlit
