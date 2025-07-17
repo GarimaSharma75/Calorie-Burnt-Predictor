@@ -8,3 +8,6 @@ This project predicts the number of calories burned during exercise using a mach
 - **Model**: Uses **XGBRegressor** for accurate calorie burn prediction.
 - **Data Scaling**: Standardized with **StandardScaler** for improved performance.
 
+  ![WhatsApp Image 2025-07-17 at 18 26 45_fa557377](https://github.com/user-attachments/assets/feb54138-82cc-4f21-8668-3adcb0569bbf)
+
+
